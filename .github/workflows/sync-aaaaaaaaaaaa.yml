@@ -1,0 +1,15 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '*/3 * * * *'
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TG908/fork-sync@v1.6.3
+        with:
+          github_token: ${{ secrets.SYNC_TOKEN }}
+          owner: Loyalsoldier
+          head: master
+          base: master
