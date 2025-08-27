@@ -8,7 +8,7 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: TG908/fork-sync@v1.9.0
+      - uses: TG908/fork-sync@v2.0.10
         with:
           github_token: ${{ secrets.SYNC_TOKEN }}
           owner: Loyalsoldier
